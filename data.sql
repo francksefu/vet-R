@@ -11,8 +11,6 @@ VALUES('Devimon', '2017-05-12', 5, TRUE, 11);
 
 -- add species column
 
-ALTER TABLE animals ADD species VARCHAR(50);
-
 INSERT INTO animals (name, date_of_birth, espace_attempts, neutered, weight_kg)
 values('Charmander', '2020-02-08', 0, FALSE, -11),('Plantmon', '2021-11-15', 2, TRUE, -5.7);
 
