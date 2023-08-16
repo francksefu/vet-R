@@ -52,3 +52,12 @@ COMMIT;
  --for the last
  SELECT AVG(espace_attempts), species FROM (SELECT*FROM animals WHERE date_of_birth BETWEEN '1990-01-01' AND '2000-12-31') as animal GROUP BY species;
 
+--
+SELECT * from animals a JOIN owners o ON a.owner_id = o.id WHERE o.full_name = 'Melody Pond';
+SELECT * from animals a JOIN species s ON a.species_id = s.id WHERE s.name = 'Pokemon';
+SELECT * from animals a RIGHT JOIN owners o ON a.owner_id = o.id;
+SELECT COUNT(*), s.name from animals a JOIN species s ON a.species_id = s.id GROUP BY s.name;
+SELECT a.name from animals a JOIN species s ON a.species_id = s.id JOIN owners o ON a.owner_id = o.id WHERE (s.name ='Digimon' AND o.full_name = 'Jennifer Orwell');
+SELECT a.name, a.date_of_birth, a.espace_attempts,a.neutered, a.weight_kg, s.name from animals a JOIN species s ON a.species_id = s.id JOIN owners o ON a.owner_id = o.id WHERE (a.espace_attempts = 0 AND o.full_name = 'Dean Winchester');
+SELECT o.full_name, COUNT(o.id) from animals a JOIN owners o ON a.owner_id = o.id GROUP BY o.id HAVING COUNT(o.id) = (SELECT MAX(num) FROM ( SELECT o.full_name as full_name, COUNT(o.id) as num from animals a JOIN owners o ON a.owner_id = o.id GROUP BY o.id) as tab);
+
