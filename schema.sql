@@ -9,6 +9,8 @@ CREATE TABLE animals (
   weight_kg  DEC(11, 5),PRIMARY KEY(id)
 );
 
+ALTER TABLE animals ADD species VARCHAR(50);
+
 CREATE TABLE owners(
   id INT GENERATED ALWAYS AS IDENTITY, 
   full_name VARCHAR(60) NOT NULL,
