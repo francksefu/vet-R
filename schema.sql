@@ -8,3 +8,5 @@ CREATE TABLE animals (
   espace_attempts INT, neutered BOOLEAN NOT NULL,
   weight_kg  DEC(11, 5)
 );
+
+ALTER TABLE animals ADD species VARCHAR(50);
