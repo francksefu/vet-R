@@ -114,11 +114,12 @@ $ cd vet_clinic
 
 Install this project with:
 
-coming soon
+-Install postgresql
 
 ### Usage
 
-Coming soon
+-After the installation of postgresql, open SQL shell(psql)
+and inside run first the commande in schema.sql file(copy the content and paste it in SQL shell), after that you can run the content of data.sql file and for the last you can run the content of queries.sql file
 
 ### Run tests
 
